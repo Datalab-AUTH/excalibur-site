@@ -1,0 +1,201 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<header
+  class="w-full py-4 px-4 border-b border-gray-200 bg-white sticky top-0 z-50"
+  role="banner"
+>
+  <nav
+    class="max-w-6xl mx-auto flex items-center justify-between"
+    aria-label="Main navigation"
+  >
+    <a
+      href="/"
+      class="text-2xl font-bold text-gray-900 hover:text-gray-700 transition-colors"
+      aria-label="EXCALIBUR - Home"
+    >
+      EXCALIBUR
+    </a>
+    
+    <!-- Mobile menu button -->
+    <button
+      type="button"
+      class="md:hidden p-2 text-gray-600 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2 rounded-lg"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      id="mobile-menu-button"
+    >
+      <Icon name="tabler:menu-2" class="w-6 h-6" aria-hidden="true" />
+    </button>
+
+    <!-- Desktop navigation -->
+    <ul class="hidden md:flex items-center gap-6" role="list">
+      <li>
+        <a
+          href="/"
+          class="text-gray-600 hover:text-gray-900 transition-colors"
+          aria-current={Astro.url.pathname === '/' ? 'page' : undefined}
+        >
+          Home
+        </a>
+      </li>
+      <!-- About Dropdown -->
+      <li class="relative group">
+        <button
+          class="text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1"
+          aria-expanded="false"
+          aria-haspopup="true"
+        >
+          About
+          <Icon name="tabler:chevron-down" class="w-4 h-4" aria-hidden="true" />
+        </button>
+        <ul class="absolute left-0 top-full mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <li>
+            <a href="/about/project" class="block px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded-t-lg">
+              Project
+            </a>
+          </li>
+          <li>
+            <a href="/about/objectives" class="block px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors">
+              Objectives
+            </a>
+          </li>
+          <li>
+            <a href="/about/methodology" class="block px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded-b-lg">
+              Methodological Approach
+            </a>
+          </li>
+        </ul>
+      </li>
+      <!-- Research & Outputs Dropdown -->
+      <li class="relative group">
+        <button
+          class="text-gray-600 hover:text-gray-900 transition-colors flex items-center gap-1"
+          aria-expanded="false"
+          aria-haspopup="true"
+        >
+          Research & Outputs
+          <Icon name="tabler:chevron-down" class="w-4 h-4" aria-hidden="true" />
+        </button>
+        <ul class="absolute left-0 top-full mt-2 w-56 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+          <li>
+            <a href="/research/publications" class="block px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded-t-lg">
+              Publications
+            </a>
+          </li>
+          <li>
+            <a href="/research/tools" class="block px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors">
+              Software & Tools
+            </a>
+          </li>
+          <li>
+            <a href="/research/citizen-science" class="block px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors rounded-b-lg">
+              Citizen Science / Case Studies
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a
+          href="/contact"
+          class="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition-colors"
+          aria-current={Astro.url.pathname === '/contact' ? 'page' : undefined}
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden border-t border-gray-200 bg-white"
+    role="menu"
+    aria-labelledby="mobile-menu-button"
+  >
+    <ul class="flex flex-col py-4" role="list">
+      <li>
+        <a
+          href="/"
+          class="block px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+          role="menuitem"
+        >
+          Home
+        </a>
+      </li>
+      <!-- Mobile About Section -->
+      <li class="border-t border-gray-100">
+        <span class="block px-4 py-2 text-xs font-semibold text-gray-400 uppercase">About</span>
+        <a href="/about/project" class="block px-6 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors" role="menuitem">
+          Project
+        </a>
+        <a href="/about/objectives" class="block px-6 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors" role="menuitem">
+          Objectives
+        </a>
+        <a href="/about/methodology" class="block px-6 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors" role="menuitem">
+          Methodological Approach
+        </a>
+      </li>
+      <!-- Mobile Research Section -->
+      <li class="border-t border-gray-100">
+        <span class="block px-4 py-2 text-xs font-semibold text-gray-400 uppercase">Research & Outputs</span>
+        <a href="/research/publications" class="block px-6 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors" role="menuitem">
+          Publications
+        </a>
+        <a href="/research/tools" class="block px-6 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors" role="menuitem">
+          Software & Tools
+        </a>
+        <a href="/research/citizen-science" class="block px-6 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors" role="menuitem">
+          Citizen Science / Case Studies
+        </a>
+      </li>
+      <li class="border-t border-gray-100">
+        <a
+          href="/contact"
+          class="block px-4 py-3 text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+          role="menuitem"
+        >
+          Contact
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle functionality
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (menuButton && mobileMenu) {
+    menuButton.addEventListener('click', () => {
+      const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isExpanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (
+        !menuButton.contains(e.target as Node) &&
+        !mobileMenu.contains(e.target as Node) &&
+        !mobileMenu.classList.contains('hidden')
+      ) {
+        menuButton.setAttribute('aria-expanded', 'false');
+        mobileMenu.classList.add('hidden');
+      }
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+        menuButton.setAttribute('aria-expanded', 'false');
+        mobileMenu.classList.add('hidden');
+        menuButton.focus();
+      }
+    });
+  }
+</script>

@@ -1,0 +1,127 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ScrollReveal from "../../components/ScrollReveal.tsx";
+import { Icon } from "astro-icon/components";
+import { SITE } from "../../config/site.mjs";
+---
+
+<Layout
+  title={`Objectives | ${SITE.title}`}
+  description="Discover the key objectives of the EXCALIBUR project for advancing trustworthy and responsible AI."
+  canonicalURL={`${SITE.url}/about/objectives`}
+>
+  <Header />
+  <main id="main-content" role="main">
+    <section class="max-w-4xl mx-auto px-4 py-20">
+      <ScrollReveal client:idle>
+        <h1 class="text-5xl font-bold text-gray-900 mb-4">Objectives</h1>
+      </ScrollReveal>
+      <ScrollReveal client:load delay={0.1}>
+        <p class="text-xl text-gray-600 mb-12">
+          The strategic goals driving EXCALIBUR's mission for trustworthy AI.
+        </p>
+      </ScrollReveal>
+
+      <div class="space-y-8">
+        <ScrollReveal client:load delay={0.2}>
+          <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Icon name="tabler:file-text" class="w-6 h-6 text-gray-900" aria-hidden="true" />
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold text-gray-900 mb-2">Regulatory Alignment</h2>
+                <p class="text-gray-600">
+                  Translate Trustworthy AI principles and regulatory requirements into actionable technical specifications and ethical guidelines that ensure compliance and responsible development.
+                </p>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={0.3}>
+          <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Icon name="tabler:brain" class="w-6 h-6 text-gray-900" aria-hidden="true" />
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold text-gray-900 mb-2">LLM-Powered Explainability</h2>
+                <p class="text-gray-600">
+                  Develop a model-agnostic LLM-based framework that generates human-readable explanations by learning from diverse XAI methods, from LIME-like approaches to more advanced techniques.
+                </p>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={0.4}>
+          <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Icon name="tabler:scale" class="w-6 h-6 text-gray-900" aria-hidden="true" />
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold text-gray-900 mb-2">Fairness Evaluation</h2>
+                <p class="text-gray-600">
+                  Create a comprehensive fairness evaluation module that computes and interprets fairness metrics, using LLMs to explain their meaning in context and uncover potential sources of bias.
+                </p>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={0.5}>
+          <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Icon name="tabler:tools" class="w-6 h-6 text-gray-900" aria-hidden="true" />
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold text-gray-900 mb-2">Open-Source Tools</h2>
+                <p class="text-gray-600">
+                  Deliver an open-source toolset and visualization platform (Python library and web-based interface) that integrates seamlessly into real AI pipelines with standard security and privacy practices.
+                </p>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={0.6}>
+          <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Icon name="tabler:users" class="w-6 h-6 text-gray-900" aria-hidden="true" />
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold text-gray-900 mb-2">Stakeholder Validation</h2>
+                <p class="text-gray-600">
+                  Conduct rigorous validation through in-lab evaluation and in-the-wild case studies with non-expert stakeholders, assessing usability, trust, clarity of explanations, and usefulness of fairness reports.
+                </p>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={0.7}>
+          <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Icon name="tabler:heart-handshake" class="w-6 h-6 text-gray-900" aria-hidden="true" />
+              </div>
+              <div>
+                <h2 class="text-xl font-semibold text-gray-900 mb-2">Societal Impact</h2>
+                <p class="text-gray-600">
+                  Ensure practical usefulness and societal relevance through a citizen-science-inspired approach that promotes continuous feedback and real-world applicability.
+                </p>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

@@ -1,0 +1,143 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<footer
+  id="contact"
+  class="w-full py-12 px-4 border-t border-gray-200 bg-white"
+  role="contentinfo"
+>
+  <div class="max-w-6xl mx-auto">
+    <div class="grid md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 mb-4">EXCALIBUR</h2>
+        <p class="text-gray-600 text-sm">
+          Trustworthy and Responsible AI through LLM-powered Explainability and Fairness Evaluation.
+        </p>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 mb-4">About</h2>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="/about/project"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+              >Project</a
+            >
+          </li>
+          <li>
+            <a
+              href="/about/objectives"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+              >Objectives</a
+            >
+          </li>
+          <li>
+            <a
+              href="/about/methodology"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+              >Methodology</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 mb-4">Research</h2>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="/research/publications"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+              >Publications</a
+            >
+          </li>
+          <li>
+            <a
+              href="/research/tools"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+              >Software & Tools</a
+            >
+          </li>
+          <li>
+            <a
+              href="/research/citizen-science"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+              >Citizen Science</a
+            >
+          </li>
+          <li>
+            <a
+              href="/contact"
+              class="text-gray-600 hover:text-gray-900 transition-colors"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-lg font-semibold text-gray-900 mb-4">Connect</h2>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="https://www.elidek.gr/en/homepage/"
+              class="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit ELIDEK website (opens in new tab)"
+            >
+              <Icon name="tabler:external-link" class="w-5 h-5" aria-hidden="true" />
+              <span>ELIDEK</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/ELIDEKgr/"
+              class="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ELIDEK on Facebook (opens in new tab)"
+            >
+              <Icon name="tabler:brand-facebook" class="w-5 h-5" aria-hidden="true" />
+              <span>Facebook</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://x.com/ELIDEK_HFRI"
+              class="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ELIDEK on Twitter/X (opens in new tab)"
+            >
+              <Icon name="tabler:brand-twitter" class="w-5 h-5" aria-hidden="true" />
+              <span>Twitter</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/company/hellenic-foundation-for-research-and-innovation/"
+              class="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ELIDEK on LinkedIn (opens in new tab)"
+            >
+              <Icon name="tabler:brand-linkedin" class="w-5 h-5" aria-hidden="true" />
+              <span>LinkedIn</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Funding Acknowledgment -->
+    <div class="pt-8 border-t border-gray-200 mb-8">
+      <p class="text-sm text-gray-600 text-center max-w-4xl mx-auto">
+        This project is funded by the General Secretariat for Research and Technology (GSRT) and the Hellenic Foundation for Research and Innovation (HFRI), under the National Recovery and Resilience Plan "Greece 2.0", funded by the European Union – NextGenerationEU.
+      </p>
+    </div>
+    
+    <div class="pt-4 border-t border-gray-200 text-center text-gray-600">
+      <p>&copy; {new Date().getFullYear()} EXCALIBUR Project. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,90 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ScrollReveal from "../../components/ScrollReveal.tsx";
+import { SITE } from "../../config/site.mjs";
+---
+
+<Layout
+  title={`Project | ${SITE.title}`}
+  description="Learn about the EXCALIBUR project - trustworthy and responsible AI through LLM-powered explainability and fairness evaluation."
+  canonicalURL={`${SITE.url}/about/project`}
+>
+  <Header />
+  <main id="main-content" role="main">
+    <section class="max-w-4xl mx-auto px-4 py-20">
+      <ScrollReveal client:idle>
+        <h1 class="text-5xl font-bold text-gray-900 mb-4">The Project</h1>
+      </ScrollReveal>
+      <ScrollReveal client:load delay={0.1}>
+        <p class="text-xl text-gray-600 mb-12">
+          Building trustworthy and responsible AI through advanced explainability and fairness evaluation.
+        </p>
+      </ScrollReveal>
+
+      <div class="prose prose-lg max-w-none">
+        <ScrollReveal client:load delay={0.2}>
+          <div class="bg-gray-50 border-l-4 border-gray-900 p-6 mb-8">
+            <p class="text-gray-700">
+              The EXCALIBUR project is implemented under the Hellenic Foundation for Research and Innovation (HFRI / ELIDEK) through the call "Basic Research Financing (Horizontal support for all Sciences)", which is part of Component 4.5 "Promoting Research and Innovation" of the National Recovery and Resilience Plan "Greece 2.0", funded by the European Union – NextGenerationEU.
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={0.3}>
+          <p>
+            In response to the growing need for <strong>trustworthy and responsible artificial intelligence</strong>, EXCALIBUR is structured around <strong>three core components</strong>:
+          </p>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={0.4}>
+          <h2>Framework</h2>
+          <p>
+            A research-driven framework that leverages <strong>Large Language Models (LLMs)</strong> as advanced, <strong>model-agnostic explainers and fairness evaluators</strong>, integrating insights from established explainability and fairness approaches into <strong>clear, human-understandable outputs</strong>.
+          </p>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={0.5}>
+          <h2>Toolset</h2>
+          <p>
+            An <strong>open-source toolset and visualization platform</strong> that embeds the framework into real AI pipelines and presents explanations and fairness reports in a <strong>transparent, user-friendly way</strong>, enabling human insight, interaction, and feedback.
+          </p>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={0.6}>
+          <h2>Evaluation & Case Studies</h2>
+          <p>
+            A two-track validation approach combining <strong>in-lab experimentation</strong> for method development and fine-tuning with <strong>in-the-wild case studies</strong> involving stakeholders, assessing usability, trust, clarity, and overall impact through iterative evaluation.
+          </p>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={0.7}>
+          <h2 class="mt-12">The Key Pillars of EXCALIBUR</h2>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={0.8}>
+          <h3>Regulatory-to-Technical Mapping</h3>
+          <p>
+            The systematic translation of <strong>Trustworthy AI principles and regulatory requirements</strong> into concrete technical specifications and ethical guidelines that shape the framework and platform design.
+          </p>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={0.9}>
+          <h3>Model-Agnostic Explainability and Fairness, Powered by LLMs</h3>
+          <p>
+            LLM-based components that produce <strong>human-like explanations and contextual fairness interpretations</strong> across tasks and metrics, supporting the identification and understanding of potential sources of bias in data and models.
+          </p>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={1.0}>
+          <h3>Open Tools and Stakeholder-Driven Validation</h3>
+          <p>
+            An <strong>open infrastructure</strong> for reuse (covering code, tools, and platform components) combined with <strong>continuous evaluation involving researchers and non-expert users</strong>, ensuring practical usefulness and societal relevance.
+          </p>
+        </ScrollReveal>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

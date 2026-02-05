@@ -1,0 +1,135 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ScrollReveal from "../../components/ScrollReveal.tsx";
+import { Icon } from "astro-icon/components";
+import { SITE } from "../../config/site.mjs";
+---
+
+<Layout
+  title={`Software & Tools | ${SITE.title}`}
+  description="Explore EXCALIBUR's open-source toolset and visualization platform for AI explainability and fairness."
+  canonicalURL={`${SITE.url}/research/tools`}
+>
+  <Header />
+  <main id="main-content" role="main">
+    <section class="max-w-4xl mx-auto px-4 py-20">
+      <ScrollReveal client:idle>
+        <h1 class="text-5xl font-bold text-gray-900 mb-4">Software & Tools</h1>
+      </ScrollReveal>
+      <ScrollReveal client:load delay={0.1}>
+        <p class="text-xl text-gray-600 mb-12">
+          Open-source toolset and visualization platform for AI explainability and fairness evaluation.
+        </p>
+      </ScrollReveal>
+
+      <div class="space-y-8">
+        <ScrollReveal client:load delay={0.2}>
+          <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Icon name="tabler:brand-python" class="w-6 h-6 text-white" aria-hidden="true" />
+              </div>
+              <div class="flex-grow">
+                <div class="flex items-center justify-between mb-2">
+                  <h2 class="text-xl font-semibold text-gray-900">Python Library</h2>
+                  <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">In Development</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                  A comprehensive Python library that integrates the EXCALIBUR framework into real AI pipelines. Provides easy-to-use APIs for generating explanations and fairness reports.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2 py-1 bg-gray-100 text-gray-700 text-sm rounded">Explainability</span>
+                  <span class="px-2 py-1 bg-gray-100 text-gray-700 text-sm rounded">Fairness</span>
+                  <span class="px-2 py-1 bg-gray-100 text-gray-700 text-sm rounded">LLM-powered</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={0.3}>
+          <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Icon name="tabler:browser" class="w-6 h-6 text-white" aria-hidden="true" />
+              </div>
+              <div class="flex-grow">
+                <div class="flex items-center justify-between mb-2">
+                  <h2 class="text-xl font-semibold text-gray-900">Web Platform</h2>
+                  <span class="px-3 py-1 bg-yellow-100 text-yellow-800 text-sm rounded-full">In Development</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                  An intuitive web-based visualization platform that presents explanations and fairness reports in a transparent, user-friendly way. Supports human insight, interaction, and feedback.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2 py-1 bg-gray-100 text-gray-700 text-sm rounded">Visualization</span>
+                  <span class="px-2 py-1 bg-gray-100 text-gray-700 text-sm rounded">Interactive</span>
+                  <span class="px-2 py-1 bg-gray-100 text-gray-700 text-sm rounded">User Feedback</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={0.4}>
+          <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Icon name="tabler:brand-github" class="w-6 h-6 text-white" aria-hidden="true" />
+              </div>
+              <div class="flex-grow">
+                <div class="flex items-center justify-between mb-2">
+                  <h2 class="text-xl font-semibold text-gray-900">GitHub Repository</h2>
+                  <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Coming Soon</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                  All code, tools, and platform components will be released as open-source on GitHub, enabling reuse and community contributions.
+                </p>
+                <div class="flex flex-wrap gap-2">
+                  <span class="px-2 py-1 bg-gray-100 text-gray-700 text-sm rounded">Open Source</span>
+                  <span class="px-2 py-1 bg-gray-100 text-gray-700 text-sm rounded">MIT License</span>
+                  <span class="px-2 py-1 bg-gray-100 text-gray-700 text-sm rounded">Community</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+      </div>
+
+      <ScrollReveal client:load delay={0.5}>
+        <div class="mt-12 bg-gray-50 border border-gray-200 rounded-lg p-6">
+          <h2 class="text-xl font-semibold text-gray-900 mb-4">Key Features</h2>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="flex items-start gap-3">
+              <Icon name="tabler:check" class="w-5 h-5 text-green-600 mt-1" aria-hidden="true" />
+              <span class="text-gray-600">Model-agnostic explainability</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <Icon name="tabler:check" class="w-5 h-5 text-green-600 mt-1" aria-hidden="true" />
+              <span class="text-gray-600">Comprehensive fairness metrics</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <Icon name="tabler:check" class="w-5 h-5 text-green-600 mt-1" aria-hidden="true" />
+              <span class="text-gray-600">Human-readable explanations</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <Icon name="tabler:check" class="w-5 h-5 text-green-600 mt-1" aria-hidden="true" />
+              <span class="text-gray-600">Interactive visualizations</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <Icon name="tabler:check" class="w-5 h-5 text-green-600 mt-1" aria-hidden="true" />
+              <span class="text-gray-600">Privacy-preserving design</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <Icon name="tabler:check" class="w-5 h-5 text-green-600 mt-1" aria-hidden="true" />
+              <span class="text-gray-600">Easy integration with AI pipelines</span>
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+    </section>
+  </main>
+  <Footer />
+</Layout>

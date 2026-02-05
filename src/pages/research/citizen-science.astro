@@ -1,0 +1,144 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ScrollReveal from "../../components/ScrollReveal.tsx";
+import { Icon } from "astro-icon/components";
+import { SITE } from "../../config/site.mjs";
+---
+
+<Layout
+  title={`Citizen Science / Case Studies | ${SITE.title}`}
+  description="Learn about EXCALIBUR's citizen science approach and in-the-wild case studies for stakeholder validation."
+  canonicalURL={`${SITE.url}/research/citizen-science`}
+>
+  <Header />
+  <main id="main-content" role="main">
+    <section class="max-w-4xl mx-auto px-4 py-20">
+      <ScrollReveal client:idle>
+        <h1 class="text-5xl font-bold text-gray-900 mb-4">Citizen Science / Case Studies</h1>
+      </ScrollReveal>
+      <ScrollReveal client:load delay={0.1}>
+        <p class="text-xl text-gray-600 mb-12">
+          Stakeholder-driven validation through in-lab experimentation and in-the-wild case studies.
+        </p>
+      </ScrollReveal>
+
+      <div class="prose prose-lg max-w-none">
+        <ScrollReveal client:load delay={0.2}>
+          <p>
+            EXCALIBUR follows a <strong>citizen-science-inspired approach</strong> to ensure continuous feedback and real-world relevance. Our validation strategy combines rigorous in-lab evaluation with meaningful stakeholder engagement.
+          </p>
+        </ScrollReveal>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 mt-12">
+        <ScrollReveal client:load delay={0.3}>
+          <div class="bg-white border border-gray-200 rounded-lg p-6 h-full">
+            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+              <Icon name="tabler:flask" class="w-6 h-6 text-gray-900" aria-hidden="true" />
+            </div>
+            <h2 class="text-xl font-semibold text-gray-900 mb-3">In-Lab Evaluation</h2>
+            <p class="text-gray-600 mb-4">
+              Controlled experimentation using baseline AI models built on public wearable datasets for method development and fine-tuning.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start gap-2">
+                <Icon name="tabler:check" class="w-4 h-4 text-green-600 mt-1" aria-hidden="true" />
+                <span>Public wearable datasets</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <Icon name="tabler:check" class="w-4 h-4 text-green-600 mt-1" aria-hidden="true" />
+                <span>Baseline AI models</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <Icon name="tabler:check" class="w-4 h-4 text-green-600 mt-1" aria-hidden="true" />
+                <span>Controlled conditions</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <Icon name="tabler:check" class="w-4 h-4 text-green-600 mt-1" aria-hidden="true" />
+                <span>Method fine-tuning</span>
+              </li>
+            </ul>
+          </div>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={0.4}>
+          <div class="bg-white border border-gray-200 rounded-lg p-6 h-full">
+            <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+              <Icon name="tabler:users" class="w-6 h-6 text-gray-900" aria-hidden="true" />
+            </div>
+            <h2 class="text-xl font-semibold text-gray-900 mb-3">In-the-Wild Studies</h2>
+            <p class="text-gray-600 mb-4">
+              Real-world case studies involving non-expert stakeholders through iterative evaluation rounds.
+            </p>
+            <ul class="space-y-2 text-gray-600">
+              <li class="flex items-start gap-2">
+                <Icon name="tabler:check" class="w-4 h-4 text-green-600 mt-1" aria-hidden="true" />
+                <span>Non-expert stakeholders</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <Icon name="tabler:check" class="w-4 h-4 text-green-600 mt-1" aria-hidden="true" />
+                <span>Usability assessment</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <Icon name="tabler:check" class="w-4 h-4 text-green-600 mt-1" aria-hidden="true" />
+                <span>Trust & clarity evaluation</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <Icon name="tabler:check" class="w-4 h-4 text-green-600 mt-1" aria-hidden="true" />
+                <span>Iterative feedback loops</span>
+              </li>
+            </ul>
+          </div>
+        </ScrollReveal>
+      </div>
+
+      <ScrollReveal client:load delay={0.5}>
+        <div class="mt-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Evaluation Criteria</h2>
+          <div class="grid md:grid-cols-4 gap-4">
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
+              <Icon name="tabler:thumb-up" class="w-8 h-8 text-gray-900 mx-auto mb-2" aria-hidden="true" />
+              <h3 class="font-semibold text-gray-900">Usability</h3>
+              <p class="text-sm text-gray-600">Ease of use and accessibility</p>
+            </div>
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
+              <Icon name="tabler:shield-check" class="w-8 h-8 text-gray-900 mx-auto mb-2" aria-hidden="true" />
+              <h3 class="font-semibold text-gray-900">Trust</h3>
+              <p class="text-sm text-gray-600">Confidence in AI outputs</p>
+            </div>
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
+              <Icon name="tabler:eye" class="w-8 h-8 text-gray-900 mx-auto mb-2" aria-hidden="true" />
+              <h3 class="font-semibold text-gray-900">Clarity</h3>
+              <p class="text-sm text-gray-600">Understandable explanations</p>
+            </div>
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
+              <Icon name="tabler:chart-bar" class="w-8 h-8 text-gray-900 mx-auto mb-2" aria-hidden="true" />
+              <h3 class="font-semibold text-gray-900">Impact</h3>
+              <p class="text-sm text-gray-600">Real-world usefulness</p>
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+
+      <!-- Get Involved CTA -->
+      <ScrollReveal client:load delay={0.6}>
+        <div class="mt-12 bg-gray-900 text-white rounded-2xl p-8 text-center">
+          <h2 class="text-2xl font-bold mb-4">Get Involved</h2>
+          <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+            Interested in participating in our case studies? We're looking for stakeholders to help validate our explainability and fairness tools. Sign up to be notified about upcoming opportunities.
+          </p>
+          <a
+            href="/contact"
+            class="inline-flex items-center gap-2 px-8 py-3 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-colors font-medium"
+          >
+            <Icon name="tabler:mail" class="w-5 h-5" aria-hidden="true" />
+            Contact Us
+          </a>
+        </div>
+      </ScrollReveal>
+    </section>
+  </main>
+  <Footer />
+</Layout>
