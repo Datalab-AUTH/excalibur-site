@@ -1,26 +1,163 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* Custom CSS Variables for elegant color palette */
+:root {
+	--color-primary: #4f46e5;
+	--color-primary-dark: #4338ca;
+	--color-primary-light: #818cf8;
+	--color-accent: #06b6d4;
+	--color-accent-dark: #0891b2;
+	--gradient-primary: linear-gradient(
+		135deg,
+		#4f46e5 0%,
+		#7c3aed 50%,
+		#06b6d4 100%
+	);
+	--gradient-dark: linear-gradient(
+		135deg,
+		#1e1b4b 0%,
+		#312e81 50%,
+		#1e3a5f 100%
+	);
+	--gradient-subtle: linear-gradient(
+		135deg,
+		#f8fafc 0%,
+		#f1f5f9 50%,
+		#e0f2fe 100%
+	);
+	--glass-bg: rgba(255, 255, 255, 0.8);
+	--glass-border: rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth font rendering */
+html {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--gradient-subtle);
+	background-attachment: fixed;
+}
+
+/* Gradient text utility */
+.gradient-text {
+	background: var(--gradient-primary);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
+
+/* Glassmorphism card */
+.glass-card {
+	background: var(--glass-bg);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+	border: 1px solid var(--glass-border);
+}
+
+/* Elegant button styles */
+.btn-primary {
+	background: var(--gradient-primary);
+	color: white;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);
+}
+
+.btn-primary:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px 0 rgba(79, 70, 229, 0.5);
+}
+
+.btn-secondary {
+	background: white;
+	border: 1px solid rgba(79, 70, 229, 0.2);
+	color: var(--color-primary);
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-secondary:hover {
+	border-color: var(--color-primary);
+	background: rgba(79, 70, 229, 0.05);
+	transform: translateY(-2px);
+}
+
+/* Elegant card with hover effect */
+.elegant-card {
+	background: white;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	border-radius: 1rem;
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.elegant-card:hover {
+	transform: translateY(-4px);
+	box-shadow:
+		0 20px 40px rgba(79, 70, 229, 0.1),
+		0 8px 16px rgba(0, 0, 0, 0.05);
+	border-color: rgba(79, 70, 229, 0.1);
+}
+
+/* Icon container with gradient */
+.icon-gradient {
+	background: var(--gradient-primary);
+	color: white;
+}
+
+/* Subtle divider */
+.divider-gradient {
+	height: 1px;
+	background: linear-gradient(
+		90deg,
+		transparent,
+		rgba(79, 70, 229, 0.3),
+		transparent
+	);
+}
+
+/* Animated underline for links */
+.link-underline {
+	position: relative;
+}
+
+.link-underline::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: -2px;
+	left: 0;
+	background: var(--gradient-primary);
+	transition: width 0.3s ease;
+}
+
+.link-underline:hover::after {
+	width: 100%;
+}
+
 /* Accessibility: Skip to content link */
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border-width: 0;
 }
 
 .sr-only:focus {
-  position: fixed;
-  width: auto;
-  height: auto;
-  padding: 0.5rem 1rem;
-  margin: 0;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
+	position: fixed;
+	width: auto;
+	height: auto;
+	padding: 0.5rem 1rem;
+	margin: 0;
+	overflow: visible;
+	clip: auto;
+	white-space: normal;
 }
