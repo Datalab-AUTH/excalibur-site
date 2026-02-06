@@ -8,112 +8,213 @@ import { SITE } from "../../config/site.mjs";
 ---
 
 <Layout
-  title={`Methodological Approach | ${SITE.title}`}
-  description="Explore EXCALIBUR's end-to-end methodological approach for democratizing trustworthy and responsible AI."
-  canonicalURL={`${SITE.url}/about/methodology`}
+	title={`Methodological Approach | ${SITE.title}`}
+	description="Explore EXCALIBUR's end-to-end methodological approach for democratizing trustworthy and responsible AI."
+	canonicalURL={`${SITE.url}/about/methodology`}
 >
-  <Header />
-  <main id="main-content" role="main">
-    <section class="max-w-4xl mx-auto px-4 py-20">
-      <ScrollReveal client:idle>
-        <h1 class="text-5xl font-bold text-gray-900 mb-4">Methodological Approach</h1>
-      </ScrollReveal>
-      <ScrollReveal client:load delay={0.1}>
-        <p class="text-xl text-gray-600 mb-12">
-          An end-to-end strategy for democratizing trustworthy and responsible AI.
-        </p>
-      </ScrollReveal>
+	<Header />
+	<main id="main-content" role="main">
+		<section class="max-w-4xl mx-auto px-4 py-20">
+			<ScrollReveal client:idle>
+				<h1 class="text-5xl font-bold text-gray-900 mb-4">
+					Methodological Approach
+				</h1>
+			</ScrollReveal>
+			<ScrollReveal client:load delay={0.1}>
+				<p class="text-xl text-gray-600 mb-12">
+					An end-to-end strategy for democratizing trustworthy and responsible
+					AI.
+				</p>
+			</ScrollReveal>
 
-      <div class="prose prose-lg max-w-none">
-        <ScrollReveal client:load delay={0.2}>
-          <p>
-            The methodological approach of EXCALIBUR is structured as an end-to-end strategy for <strong>democratizing trustworthy and responsible AI</strong>, by combining regulatory mapping, method development with Large Language Models (LLMs), tool building, and stakeholder-driven evaluation.
-          </p>
-        </ScrollReveal>
+			<!-- Visual Timeline -->
+			<ScrollReveal client:load delay={0.2}>
+				<div class="mb-16">
+					<h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">
+						Project Phases
+					</h2>
+					<div class="grid md:grid-cols-4 gap-4">
+						<button
+							onclick="scrollToPhase('phase-1')"
+							class="bg-gray-900 text-white p-6 rounded-lg text-center hover:bg-gray-800 transition-colors cursor-pointer"
+						>
+							<div
+								class="w-10 h-10 bg-white text-gray-900 rounded-full flex items-center justify-center mx-auto mb-4 font-bold"
+							>
+								1
+							</div>
+							<h3 class="font-semibold mb-2">Requirements</h3>
+							<p class="text-sm text-gray-300">
+								Regulatory & technical mapping
+							</p>
+						</button>
+						<button
+							onclick="scrollToPhase('phase-2')"
+							class="bg-gray-800 text-white p-6 rounded-lg text-center hover:bg-gray-700 transition-colors cursor-pointer"
+						>
+							<div
+								class="w-10 h-10 bg-white text-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 font-bold"
+							>
+								2
+							</div>
+							<h3 class="font-semibold mb-2">Framework</h3>
+							<p class="text-sm text-gray-300">
+								LLM-based explainability & fairness
+							</p>
+						</button>
+						<button
+							onclick="scrollToPhase('phase-3')"
+							class="bg-gray-700 text-white p-6 rounded-lg text-center hover:bg-gray-600 transition-colors cursor-pointer"
+						>
+							<div
+								class="w-10 h-10 bg-white text-gray-700 rounded-full flex items-center justify-center mx-auto mb-4 font-bold"
+							>
+								3
+							</div>
+							<h3 class="font-semibold mb-2">Validation</h3>
+							<p class="text-sm text-gray-300">
+								In-lab & in-the-wild studies
+							</p>
+						</button>
+						<button
+							onclick="scrollToPhase('phase-4')"
+							class="bg-gray-600 text-white p-6 rounded-lg text-center hover:bg-gray-500 transition-colors cursor-pointer"
+						>
+							<div
+								class="w-10 h-10 bg-white text-gray-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold"
+							>
+								4
+							</div>
+							<h3 class="font-semibold mb-2">Delivery</h3>
+							<p class="text-sm text-gray-300">
+								Open-source tools & platform
+							</p>
+						</button>
+					</div>
+				</div>
+			</ScrollReveal>
 
-        <ScrollReveal client:load delay={0.3}>
-          <h2>Phase 1: Regulatory & Requirements Mapping</h2>
-          <p>
-            The project begins by <strong>translating Trustworthy AI principles into actionable technical requirements</strong>, with emphasis on <strong>transparency, fairness, and accountability</strong>, while also specifying <strong>human-centric needs</strong> (human oversight, societal well-being, safety) and establishing <strong>ethical and data governance guidelines</strong> to ensure GDPR-aligned experimentation.
-          </p>
-        </ScrollReveal>
+			<div class="prose prose-lg max-w-none">
+				<ScrollReveal client:load delay={0.3}>
+					<p>
+						The methodological approach of EXCALIBUR is structured as an
+						end-to-end strategy for <strong
+							>democratizing trustworthy and responsible AI</strong
+						>, by combining regulatory mapping, method development with Large
+						Language Models (LLMs), tool building, and stakeholder-driven
+						evaluation.
+					</p>
+				</ScrollReveal>
 
-        <ScrollReveal client:load delay={0.4}>
-          <h2>Phase 2: Framework Development</h2>
-          <p>
-            Building on this foundation, EXCALIBUR designs a <strong>model-agnostic LLM-based framework</strong> with two core components:
-          </p>
-          <ul>
-            <li>
-              <strong>Explainability Module:</strong> Learns from diverse XAI methods (e.g., LIME-like to more advanced techniques) to generate human-readable explanations.
-            </li>
-            <li>
-              <strong>Fairness Evaluation Module:</strong> Computes and interprets a broad set of fairness metrics and uses the LLM to explain their meaning in context and help uncover potential sources of bias in data and models.
-            </li>
-          </ul>
-        </ScrollReveal>
+				<ScrollReveal client:load delay={0.4}>
+					<h2 id="phase-1">Phase 1: Regulatory & Requirements Mapping</h2>
+					<p>
+						The project begins by <strong
+							>translating Trustworthy AI principles into actionable technical
+							requirements</strong
+						>, with emphasis on <strong
+							>transparency, fairness, and accountability</strong
+						>, while also specifying <strong>human-centric needs</strong> (human oversight,
+						societal well-being, safety) and establishing <strong
+							>ethical and data governance guidelines</strong
+						> to ensure GDPR-aligned experimentation.
+					</p>
+				</ScrollReveal>
 
-        <ScrollReveal client:load delay={0.5}>
-          <h2>Phase 3: Validation & Experimentation</h2>
-          <p>
-            The framework is then validated through <strong>two complementary experimentation tracks</strong> in the wearable domain:
-          </p>
-          <ul>
-            <li>
-              <strong>In-lab Evaluation:</strong> Using baseline AI models built on public wearable datasets for method development and fine-tuning.
-            </li>
-            <li>
-              <strong>In-the-wild Case Studies:</strong> Involving non-expert stakeholders in iterative rounds to assess usability, trust, clarity of explanations, and usefulness of fairness reports.
-            </li>
-          </ul>
-          <p>
-            This process follows a <strong>citizen-science-inspired approach</strong> to ensure continuous feedback and real-world relevance.
-          </p>
-        </ScrollReveal>
+				<ScrollReveal client:load delay={0.5}>
+					<h2 id="phase-2">Phase 2: Framework Development</h2>
+					<p>
+						Building on this foundation, EXCALIBUR designs a <strong
+							>model-agnostic LLM-based framework</strong
+						> with two core components:
+					</p>
+					<ul>
+						<li>
+							<strong>Explainability Module:</strong> Learns from diverse XAI methods
+							(e.g., LIME-like to more advanced techniques) to generate human-readable
+							explanations.
+						</li>
+						<li>
+							<strong>Fairness Evaluation Module:</strong> Computes and interprets
+							a broad set of fairness metrics and uses the LLM to explain their meaning
+							in context and help uncover potential sources of bias in data and models.
+						</li>
+					</ul>
+				</ScrollReveal>
 
-        <ScrollReveal client:load delay={0.6}>
-          <h2>Phase 4: Open-Source Delivery</h2>
-          <p>
-            Finally, EXCALIBUR delivers an <strong>open-source toolset and visualization platform</strong> (e.g., a Python library plus a web-based interface) that:
-          </p>
-          <ul>
-            <li>Integrates the framework into real AI pipelines</li>
-            <li>Presents results in a human-friendly way</li>
-            <li>Supports user intervention and feedback</li>
-            <li>Applies standard security and privacy practices for safe deployment</li>
-          </ul>
-        </ScrollReveal>
-      </div>
+				<ScrollReveal client:load delay={0.6}>
+					<h2 id="phase-3">Phase 3: Validation & Experimentation</h2>
+					<p>
+						The framework is then validated through <strong
+							>two complementary experimentation tracks</strong
+						> in the wearable domain:
+					</p>
+					<ul>
+						<li>
+							<strong>In-lab Evaluation:</strong> Using baseline AI models built on
+							public wearable datasets for method development and fine-tuning.
+						</li>
+						<li>
+							<strong>In-the-wild Case Studies:</strong> Involving non-expert stakeholders
+							in iterative rounds to assess usability, trust, clarity of explanations,
+							and usefulness of fairness reports.
+						</li>
+					</ul>
+					<p>
+						This process follows a <strong
+							>citizen-science-inspired approach</strong
+						> to ensure continuous feedback and real-world relevance.
+					</p>
+				</ScrollReveal>
 
-      <!-- Visual Timeline -->
-      <ScrollReveal client:load delay={0.7}>
-        <div class="mt-16">
-          <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center">Project Phases</h2>
-          <div class="grid md:grid-cols-4 gap-4">
-            <div class="bg-gray-900 text-white p-6 rounded-lg text-center">
-              <div class="w-10 h-10 bg-white text-gray-900 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">1</div>
-              <h3 class="font-semibold mb-2">Requirements</h3>
-              <p class="text-sm text-gray-300">Regulatory & technical mapping</p>
-            </div>
-            <div class="bg-gray-800 text-white p-6 rounded-lg text-center">
-              <div class="w-10 h-10 bg-white text-gray-800 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">2</div>
-              <h3 class="font-semibold mb-2">Framework</h3>
-              <p class="text-sm text-gray-300">LLM-based explainability & fairness</p>
-            </div>
-            <div class="bg-gray-700 text-white p-6 rounded-lg text-center">
-              <div class="w-10 h-10 bg-white text-gray-700 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">3</div>
-              <h3 class="font-semibold mb-2">Validation</h3>
-              <p class="text-sm text-gray-300">In-lab & in-the-wild studies</p>
-            </div>
-            <div class="bg-gray-600 text-white p-6 rounded-lg text-center">
-              <div class="w-10 h-10 bg-white text-gray-600 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">4</div>
-              <h3 class="font-semibold mb-2">Delivery</h3>
-              <p class="text-sm text-gray-300">Open-source tools & platform</p>
-            </div>
-          </div>
-        </div>
-      </ScrollReveal>
-    </section>
-  </main>
-  <Footer />
+				<ScrollReveal client:load delay={0.7}>
+					<h2 id="phase-4">Phase 4: Open-Source Delivery</h2>
+					<p>
+						Finally, EXCALIBUR delivers an <strong
+							>open-source toolset and visualization platform</strong
+						> (e.g., a Python library plus a web-based interface) that:
+					</p>
+					<ul>
+						<li>Integrates the framework into real AI pipelines</li>
+						<li>Presents results in a human-friendly way</li>
+						<li>Supports user intervention and feedback</li>
+						<li>
+							Applies standard security and privacy practices for safe
+							deployment
+						</li>
+					</ul>
+				</ScrollReveal>
+			</div>
+		</section>
+	</main>
+	<Footer />
 </Layout>
+
+<script>
+	function scrollToPhase(phaseId) {
+		const element = document.getElementById(phaseId);
+		if (element) {
+			const offset = 100;
+			const elementPosition = element.getBoundingClientRect().top;
+			const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+			window.scrollTo({
+				top: offsetPosition,
+				behavior: "smooth",
+			});
+		}
+	}
+
+	// Make function globally available
+	window.scrollToPhase = scrollToPhase;
+</script>
+
+<style>
+	#phase-1,
+	#phase-2,
+	#phase-3,
+	#phase-4 {
+		scroll-margin-top: 120px;
+	}
+</style>
+

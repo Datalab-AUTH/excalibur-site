@@ -3,6 +3,9 @@ node_modules/
 .pnp
 .pnp.js
 
+# Astro files - formatting breaks class attributes
+*.astro
+
 # Build outputs
 dist/
 .astro/
