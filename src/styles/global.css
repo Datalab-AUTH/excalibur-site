@@ -8,6 +8,10 @@
 	--color-primary-light: #818cf8;
 	--color-accent: #06b6d4;
 	--color-accent-dark: #0891b2;
+	--color-button: #0b1a4a;
+	--color-button-hover: #f2a13a;
+	--color-button-text: #ffffff;
+	--color-button-hover-text: #0b1a4a;
 	--gradient-primary: linear-gradient(
 		135deg,
 		#4f46e5 0%,
@@ -71,30 +75,119 @@ body {
 	border: 1px solid var(--glass-border);
 }
 
-/* Elegant button styles */
-.btn-primary {
-	background: var(--gradient-primary);
-	color: white;
-	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-	box-shadow: 0 4px 14px 0 rgba(79, 70, 229, 0.39);
-}
-
-.btn-primary:hover {
-	transform: translateY(-2px);
-	box-shadow: 0 6px 20px 0 rgba(79, 70, 229, 0.5);
-}
-
+/* Pill button styles */
+.btn-pill,
+.btn-primary,
 .btn-secondary {
-	background: white;
-	border: 1px solid rgba(79, 70, 229, 0.2);
-	color: var(--color-primary);
-	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	background: var(--color-button);
+	color: var(--color-button-text);
+	border: 2px solid transparent;
+	border-radius: 9999px;
+	box-shadow: 0 10px 22px rgba(11, 26, 74, 0.18);
+	cursor: pointer;
+	text-decoration: none;
+	transition:
+		background-color 0.2s ease,
+		color 0.2s ease,
+		transform 0.2s ease,
+		box-shadow 0.2s ease,
+		border-color 0.2s ease;
 }
 
+.btn-pill--inverse {
+	background: #ffffff;
+	color: var(--color-button);
+	border-color: rgba(255, 255, 255, 0.7);
+	box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+}
+
+.btn-pill--inverse:hover {
+	background: var(--color-button-hover);
+	color: var(--color-button-hover-text);
+	border-color: transparent;
+}
+
+/* Phase cards for methodology steps: unified blue with vertical gradient */
+.phase-card {
+	background: linear-gradient(180deg, #061235 0%, var(--color-button) 60%);
+	color: #ffffff;
+	border-radius: 0.75rem;
+	padding: 1.25rem;
+	box-shadow: 0 10px 30px rgba(11, 26, 74, 0.18);
+	transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+	display: inline-block;
+	text-align: center;
+}
+
+.phase-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 18px 40px rgba(11, 26, 74, 0.24);
+	background: linear-gradient(180deg, #0a1730 0%, #0b1a4a 60%, #22335a 100%);
+}
+
+.phase-card .phase-title,
+.phase-card p,
+.phase-card .phase-meta {
+	color: #e6eefc;
+}
+
+/* Individual phase gradients (1 = lightest, 4 = darkest) */
+.phase-1 {
+	background: linear-gradient(180deg, #6b87ab 0%, #3d5f8a 55%, #081829 100%);
+}
+.phase-2 {
+	background: linear-gradient(180deg, #58739f 0%, #33577f 55%, #061228 100%);
+}
+.phase-3 {
+	background: linear-gradient(180deg, #466086 0%, #274a6a 55%, #041022 100%);
+}
+.phase-4 {
+	background: linear-gradient(180deg, #2f405f 0%, #0b1a4a 55%, #000616 100%);
+}
+
+/* Hover deepening per-phase */
+.phase-1:hover { background: linear-gradient(180deg, #7a95bf 0%, #415f8b 55%, #0a2233 100%); }
+.phase-2:hover { background: linear-gradient(180deg, #6483b0 0%, #375b83 55%, #07182c 100%); }
+.phase-3:hover { background: linear-gradient(180deg, #4f6f93 0%, #2b4769 55%, #051022 100%); }
+.phase-4:hover { background: linear-gradient(180deg, #364760 0%, #09163a 55%, #000416 100%); }
+
+.btn-pill:hover,
+.btn-primary:hover,
 .btn-secondary:hover {
-	border-color: var(--color-primary);
-	background: rgba(79, 70, 229, 0.05);
-	transform: translateY(-2px);
+	background: var(--color-button-hover);
+	color: var(--color-button-hover-text);
+	box-shadow: 0 14px 28px rgba(11, 26, 74, 0.22);
+	transform: translateY(-1px);
+}
+
+.btn-pill:focus-visible,
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible {
+	outline: 3px solid rgba(11, 26, 74, 0.25);
+	outline-offset: 3px;
+}
+
+.btn-pill:disabled,
+.btn-primary:disabled,
+.btn-secondary:disabled {
+	background: #9ca3af;
+	color: #ffffff;
+	cursor: not-allowed;
+	box-shadow: none;
+	transform: none;
+}
+
+.btn-pill--inverse {
+	background: #ffffff;
+	color: var(--color-button);
+	border-color: rgba(255, 255, 255, 0.7);
+	box-shadow: 0 10px 22px rgba(0, 0, 0, 0.2);
+}
+
+.btn-pill--inverse:hover {
+	background: var(--color-button-hover);
+	color: var(--color-button-hover-text);
+	border-color: transparent;
 }
 
 /* Elegant card with hover effect */
