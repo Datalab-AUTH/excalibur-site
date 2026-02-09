@@ -42,6 +42,19 @@ body {
 	background-attachment: fixed;
 }
 
+/* Index page panels */
+.panel {
+	width: 100%;
+}
+
+.panel--white {
+	background: #ffffff;
+}
+
+.panel--sand {
+	background: #f8f4ff;
+}
+
 /* Gradient text utility */
 .gradient-text {
 	background: var(--gradient-primary);

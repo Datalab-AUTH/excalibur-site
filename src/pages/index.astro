@@ -15,9 +15,15 @@ import { SITE } from "../config/site.mjs";
 >
   <Header />
   <main id="main-content" role="main">
-    <Hero />
-    <Features />
-    <CTA />
+    <div class="panel panel--white">
+      <Hero />
+    </div>
+    <div class="panel panel--sand">
+      <Features />
+    </div>
+    <div class="panel panel--white">
+      <CTA />
+    </div>
   </main>
   <Footer />
 </Layout>
