@@ -12,12 +12,7 @@
 	--color-button-hover: #f2a13a;
 	--color-button-text: #ffffff;
 	--color-button-hover-text: #0b1a4a;
-	--gradient-primary: linear-gradient(
-		135deg,
-		#4f46e5 0%,
-		#7c3aed 50%,
-		#06b6d4 100%
-	);
+	--gradient-primary: linear-gradient(135deg, var(--color-button) 0%, #6ea8ff 45%, #04102a 100%);
 	--gradient-dark: linear-gradient(
 		135deg,
 		#1e1b4b 0%,

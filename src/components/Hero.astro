@@ -4,9 +4,13 @@ import { Icon } from "astro-icon/components";
 ---
 
 <section
-	class="relative max-w-6xl mx-auto px-4 py-24 md:py-40 text-center overflow-hidden"
+	class="relative w-full px-4 py-24 md:py-40 text-center overflow-hidden"
+	style="background-image: url('/images/banner-home.jpg'); background-size: cover; background-position: center bottom; background-attachment: fixed;"
 	aria-labelledby="hero-heading"
 >
+	<!-- Semi-transparent overlay for readability -->
+	<div class="absolute inset-0 bg-[#0b1a4a]/50 z-0"></div>
+
 	<!-- Decorative background elements -->
 	<div class="absolute inset-0 -z-10 overflow-hidden">
 		<div
@@ -25,17 +29,18 @@ import { Icon } from "astro-icon/components";
 		</div>
 	</div>
 
-	<ScrollReveal client:load>
+	<div class="relative z-10 max-w-6xl mx-auto">
+		<ScrollReveal client:load>
 		<h1 id="hero-heading" class="text-5xl md:text-7xl font-bold mb-6">
-			<span class="gradient-text">EXCALIBUR</span>
+			<span class="text-white">EXCALIBUR</span>
 		</h1>
 	</ScrollReveal>
 	<ScrollReveal client:load delay={0.2}>
 		<p
-			class="text-xl md:text-2xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed"
+			class="text-xl md:text-2xl text-gray-100 mb-10 max-w-3xl mx-auto leading-relaxed"
 		>
 			Trustworthy and Responsible AI through <span
-				class="text-indigo-600 font-semibold">LLM-powered</span
+				class="text-orange-300 font-semibold">LLM-powered</span
 			> Explainability and Fairness Evaluation
 		</p>
 	</ScrollReveal>
@@ -57,4 +62,5 @@ import { Icon } from "astro-icon/components";
 			</a>
 		</div>
 	</ScrollReveal>
+	</div>
 </section>
