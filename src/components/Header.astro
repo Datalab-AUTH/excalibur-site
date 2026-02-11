@@ -130,6 +130,15 @@ import { Icon } from "astro-icon/components";
 			</li>
 			<li>
 				<a
+					href="/news"
+					class="text-gray-600 hover:text-indigo-600 transition-colors font-medium"
+					aria-current={Astro.url.pathname.startsWith("/news") ? "page" : undefined}
+				>
+					News
+				</a>
+			</li>
+			<li>
+				<a
 					href="/contact"
 					class="btn-primary px-5 py-2.5 rounded-xl font-medium"
 					aria-current={Astro.url.pathname === "/contact" ? "page" : undefined}
@@ -211,6 +220,15 @@ import { Icon } from "astro-icon/components";
 					role="menuitem"
 				>
 					Citizen Science / Case Studies
+				</a>
+			</li>
+			<li class="border-t border-gray-100">
+				<a
+					href="/news"
+					class="block px-4 py-3 text-gray-600 hover:bg-indigo-50 hover:text-indigo-700 transition-colors font-medium"
+					role="menuitem"
+				>
+					News
 				</a>
 			</li>
 			<li class="border-t border-gray-100 px-4 pt-4">
