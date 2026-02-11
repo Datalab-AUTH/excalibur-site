@@ -37,6 +37,17 @@ Notes:
 - draft is optional. If true, it is hidden from the site.
 - tags are optional.
 
+Embedding local images from the repo
+
+- Place images in `public/images/` and reference them as `/images/your-image.png` in frontmatter or article body.
+- Alternative (relative import): you can reference images kept under `src/assets/images/` from a content file using a relative path. Example used here in `src/content/news/excalibur-overview.md`:
+
+```markdown
+![EXCALIBUR demo image](../../assets/images/test.webp)
+```
+
+This works because Astro's content renderer resolves relative imports in content files during the build. If you prefer the image to be served at a stable, unhashed path, copy it into `public/images/` and reference `/images/test.webp` instead.
+
 ## How pages are generated
 
 - The listing page reads the collection with getCollection("news"), filters out draft posts, then sorts by date (newest first).

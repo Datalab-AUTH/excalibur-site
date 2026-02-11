@@ -20,3 +20,6 @@ EXCALIBUR is organised around three core components:
 Key pillars of the project include translating Trustworthy AI principles into technical requirements, developing LLM-based explainability and fairness modules, and maintaining an open infrastructure supported by continuous, stakeholder-driven evaluation.
 
 Over the coming months the team will publish method details, code releases, and case-study findings. If you'd like to get involved or follow progress, check back on our News page for updates and releases.
+
+![EXCALIBUR demo image](../../assets/images/test.webp)
+
