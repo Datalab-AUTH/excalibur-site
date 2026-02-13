@@ -1,9 +1,9 @@
 ---
-title: "EXCALIBUR — Overview, pillars and methodology"
+title: "TEST NEWS TEMPLATE: EXCALIBUR - Overview, pillars and methodology"
 summary: "An introduction to EXCALIBUR's goals: model-agnostic explainability, open toolset, and stakeholder-driven evaluation."
 date: 2026-02-11
 tags: ["project", "methodology", "announcement"]
-image: "/images/banner3.jpg"
+image: "/images/banner5.webp"
 imageAlt: "Abstract project banner"
 ---
 
