@@ -105,23 +105,31 @@ import { SITE } from "../../config/site.mjs";
         <div class="mt-12">
           <h2 class="text-2xl font-bold text-gray-900 mb-6">Evaluation Criteria</h2>
           <div class="grid md:grid-cols-4 gap-4">
-            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
-              <Icon name="tabler:thumb-up" class="w-8 h-8 text-gray-900 mx-auto mb-2" aria-hidden="true" />
+            <div class="bg-white border border-gray-200 rounded-lg p-6 h-full">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                <Icon name="tabler:thumb-up" class="w-6 h-6 text-gray-900" aria-hidden="true" />
+              </div>
               <h3 class="font-semibold text-gray-900">Usability</h3>
               <p class="text-sm text-gray-600">Ease of use and accessibility</p>
             </div>
-            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
-              <Icon name="tabler:shield-check" class="w-8 h-8 text-gray-900 mx-auto mb-2" aria-hidden="true" />
+            <div class="bg-white border border-gray-200 rounded-lg p-6 h-full">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                <Icon name="tabler:shield-check" class="w-6 h-6 text-gray-900" aria-hidden="true" />
+              </div>
               <h3 class="font-semibold text-gray-900">Trust</h3>
               <p class="text-sm text-gray-600">Confidence in AI outputs</p>
             </div>
-            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
-              <Icon name="tabler:eye" class="w-8 h-8 text-gray-900 mx-auto mb-2" aria-hidden="true" />
+            <div class="bg-white border border-gray-200 rounded-lg p-6 h-full">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                <Icon name="tabler:eye" class="w-6 h-6 text-gray-900" aria-hidden="true" />
+              </div>
               <h3 class="font-semibold text-gray-900">Clarity</h3>
               <p class="text-sm text-gray-600">Understandable explanations</p>
             </div>
-            <div class="bg-gray-50 border border-gray-200 rounded-lg p-4 text-center">
-              <Icon name="tabler:chart-bar" class="w-8 h-8 text-gray-900 mx-auto mb-2" aria-hidden="true" />
+            <div class="bg-white border border-gray-200 rounded-lg p-6 h-full">
+              <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center mb-4">
+                <Icon name="tabler:chart-bar" class="w-6 h-6 text-gray-900" aria-hidden="true" />
+              </div>
               <h3 class="font-semibold text-gray-900">Impact</h3>
               <p class="text-sm text-gray-600">Real-world usefulness</p>
             </div>
@@ -129,20 +137,26 @@ import { SITE } from "../../config/site.mjs";
         </div>
       </ScrollReveal>
 
-      <!-- Get Involved CTA -->
+      <!-- Get Involved CTA (background image + blue overlay only) -->
       <ScrollReveal client:load delay={0.6}>
-        <div class="mt-12 bg-[#0b1a4a] text-white rounded-2xl p-8 text-center">
-          <h2 class="text-2xl font-bold mb-4">Get Involved</h2>
-          <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Interested in participating in our case studies? We're looking for stakeholders to help validate our explainability and fairness tools. Sign up to be notified about upcoming opportunities.
-          </p>
-          <a
-            href="/contact"
-            class="btn-pill btn-pill--inverse inline-flex items-center gap-2 px-8 py-3 font-medium"
-          >
-            <Icon name="tabler:mail" class="w-5 h-5" aria-hidden="true" />
-            Contact Us
-          </a>
+        <div
+          class="relative overflow-hidden mt-12 rounded-2xl p-8 text-center"
+          style="background-image: url('/images/banner5.webp'), var(--gradient-primary); background-size: cover, cover; background-position: center 30%, center; background-repeat: no-repeat, no-repeat;"
+        >
+          <div class="absolute inset-0 bg-[#0b1a4a]/70 z-10"></div>
+          <div class="relative z-20 text-white">
+            <h2 class="text-2xl font-bold mb-4">Get Involved</h2>
+            <p class="text-gray-300 mb-6 max-w-2xl mx-auto">
+              Interested in participating in our case studies? We're looking for stakeholders to help validate our explainability and fairness tools. Sign up to be notified about upcoming opportunities.
+            </p>
+            <a
+              href="/contact"
+              class="btn-pill btn-pill--inverse inline-flex items-center gap-2 px-8 py-3 font-medium"
+            >
+              <Icon name="tabler:mail" class="w-5 h-5" aria-hidden="true" />
+              Contact Us
+            </a>
+          </div>
         </div>
       </ScrollReveal>
       </section>
