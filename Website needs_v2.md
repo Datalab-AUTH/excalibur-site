@@ -1,4 +1,5 @@
 # EXCALIBUR WEBSITE
+EXplainable and demoCrΑtized pipeLInes for unBiased, trUstworthy, and Responsible human-centric AI
 
 **RED:** Suggested tabs (structured) \- buttons  
 **BLACK:** Suggested text you can add as is in each tab. The text in “” can just be pasted, you can just modify how you present it.  
