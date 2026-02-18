@@ -8,9 +8,13 @@ import { Icon } from "astro-icon/components";
 	role="contentinfo"
 >
 	<div class="max-w-6xl mx-auto">
-		<div class="grid md:grid-cols-4 gap-12 mb-12">
+		<div class="grid md:grid-cols-4 gap-8 md:gap-48 mb-8 md:mb-12 md:pl-6 lg:pl-8 xl:pl-10">
 			<div class="md:col-span-1">
-				<h2 class="text-2xl font-bold gradient-text mb-4">EXCALIBUR</h2>
+				<img
+					src="/images/logo/excalibur_logo.svg"
+					alt="EXCALIBUR"
+					class="h-12 w-auto mb-4"
+				/>
 				<p class="text-gray-600 text-sm leading-relaxed">
 					Trustworthy and Responsible AI through LLM-powered Explainability and
 					Fairness Evaluation.
@@ -20,21 +24,21 @@ import { Icon } from "astro-icon/components";
 				<h2
 					class="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4"
 				>
-					About
+					Project
 				</h2>
 				<ul class="space-y-3">
 					<li>
 						<a
-							href="/about/objectives"
+							href="/about"
 							class="text-gray-600 hover:text-indigo-600 transition-colors"
-							>Objectives</a
+							>About</a
 						>
 					</li>
-					<li>
+										<li>
 						<a
-							href="/about/methodology"
+							href="/contact"
 							class="text-gray-600 hover:text-indigo-600 transition-colors"
-							>Methodology</a
+							>Contact</a
 						>
 					</li>
 				</ul>
@@ -67,13 +71,7 @@ import { Icon } from "astro-icon/components";
 							>Citizen Science</a
 						>
 					</li>
-					<li>
-						<a
-							href="/contact"
-							class="text-gray-600 hover:text-indigo-600 transition-colors"
-							>Contact</a
-						>
-					</li>
+
 				</ul>
 			</div>
 			<div>
@@ -151,29 +149,29 @@ import { Icon } from "astro-icon/components";
 			</div>
 		</div>
 
-				<div class="flex flex-wrap md:flex-nowrap items-center justify-center gap-6 mb-8">
-					<img
-						src="/images/footer/CSRI.png"
-						alt="General Secretariat for Research and Innovation"
-						class="h-24 md:h-32 w-auto max-w-[200px] md:max-w-[320px] object-contain"
-						loading="lazy"
-					/>
-					<img
-						src="/images/footer/ELIDEK.png"
-						alt="Hellenic Foundation for Research and Innovation"
-						class="h-24 md:h-32 w-auto max-w-[200px] md:max-w-[320px] object-contain"
-						loading="lazy"
-					/>
-					<img
-						src="/images/footer/greece2.0.png"
-						alt="Greece 2.0"
-						class="h-24 md:h-32 w-auto max-w-[200px] md:max-w-[320px] object-contain"
-						loading="lazy"
-					/>
-					<img
-						src="/images/footer/nextgeneu.png"
-						alt="NextGenerationEU"
-						class="h-24 md:h-32 w-auto max-w-[200px] md:max-w-[320px] object-contain"
+<div class="flex flex-nowrap items-center justify-center gap-2 sm:gap-3 md:gap-6 mb-8 px-2">
+			<img
+				src="/images/footer/CSRI.png"
+				alt="General Secretariat for Research and Innovation"
+				class="h-10 sm:h-14 md:h-20 w-auto min-w-0 flex-shrink object-contain"
+				loading="lazy"
+			/>
+			<img
+				src="/images/footer/ELIDEK.png"
+				alt="Hellenic Foundation for Research and Innovation"
+				class="h-10 sm:h-14 md:h-20 w-auto min-w-0 flex-shrink object-contain"
+				loading="lazy"
+			/>
+			<img
+				src="/images/footer/greece2.0.png"
+				alt="Greece 2.0"
+				class="h-10 sm:h-14 md:h-20 w-auto min-w-0 flex-shrink object-contain"
+				loading="lazy"
+			/>
+			<img
+				src="/images/footer/nextgeneu.png"
+				alt="NextGenerationEU"
+				class="h-10 sm:h-14 md:h-20 w-auto min-w-0 flex-shrink object-contain"
 						loading="lazy"
 					/>
 				</div>

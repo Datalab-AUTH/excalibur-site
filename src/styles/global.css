@@ -9,7 +9,7 @@
 	--color-accent: #06b6d4;
 	--color-accent-dark: #0891b2;
 	--color-button: #0b1a4a;
-	--color-button-hover: #f2a13a;
+	--color-button-hover: #b0c0ee;
 	--color-button-text: #ffffff;
 	--color-button-hover-text: #0b1a4a;
 	--gradient-primary: linear-gradient(135deg, var(--color-button) 0%, #6ea8ff 45%, #04102a 100%);
@@ -293,4 +293,16 @@ body {
 	overflow: visible;
 	clip: auto;
 	white-space: normal;
+}
+
+/* Remove underlines for links inside news article content (scoped) */
+.news-article a {
+	text-decoration: none;
+	color: var(--color-primary);
+	font-weight: 500;
+	transition: color 0.2s ease;
+}
+.news-article a:hover {
+	text-decoration: none;
+	color: var(--color-primary-dark);
 }
