@@ -294,3 +294,15 @@ body {
 	clip: auto;
 	white-space: normal;
 }
+
+/* Remove underlines for links inside news article content (scoped) */
+.news-article a {
+	text-decoration: none;
+	color: var(--color-primary);
+	font-weight: 500;
+	transition: color 0.2s ease;
+}
+.news-article a:hover {
+	text-decoration: none;
+	color: var(--color-primary-dark);
+}
