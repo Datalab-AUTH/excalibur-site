@@ -4,18 +4,74 @@ import { Icon } from "astro-icon/components";
 ---
 
 <section id="features" class="max-w-6xl mx-auto px-4 py-24">
-	<ScrollReveal client:idle delay={0.1}>
+
+
+	<!-- About the Project and At a Glance Panels -->
+	<div class="grid md:grid-cols-2 gap-8 mb-24">
+		<ScrollReveal client:idle delay={0.2}>
+			<div class="elegant-card p-8 h-full">
+				<h3 class="text-2xl font-bold text-gray-900 mb-6">About the Project</h3>
+				<ul class="space-y-4 text-gray-600 leading-relaxed">
+					<li class="flex gap-3">
+						<span class="text-indigo-600 font-bold flex-shrink-0">•</span>
+						<span>EXCALIBUR develops a human-centric framework for Trustworthy and Responsible AI, using <strong>LLMs</strong> to generate <strong>clear, model-agnostic explanations</strong> and <strong>fairness interpretations</strong> for AI systems.</span>
+					</li>
+					<li class="flex gap-3">
+						<span class="text-indigo-600 font-bold flex-shrink-0">•</span>
+						<span>It bridges regulatory principles and technical requirements, translating <strong>transparency, fairness, and accountability</strong> into actionable system specifications and ethical guidelines.</span>
+					</li>
+					<li class="flex gap-3">
+						<span class="text-indigo-600 font-bold flex-shrink-0">•</span>
+						<span>The project delivers an <strong>open-science platform and toolset</strong> with <strong>human-friendly visualizations</strong>, enabling understanding, interaction, and feedback, even for non-experts.</span>
+					</li>
+					<li class="flex gap-3">
+						<span class="text-indigo-600 font-bold flex-shrink-0">•</span>
+						<span>Validation combines <strong>in-lab experimentation</strong> (method development and fine-tuning) with <strong>in-the-wild case studies</strong> with non-expert users, following a <strong>Citizen Science</strong> approach.</span>
+					</li>
+					<li class="flex gap-3">
+						<span class="text-indigo-600 font-bold flex-shrink-0">•</span>
+						<span>Initial use cases focus on the <strong>wearables domain</strong>, where <strong>trust, clarity, and fairness</strong> are especially critical.</span>
+					</li>
+				</ul>
+			</div>
+		</ScrollReveal>
+
+		<ScrollReveal client:idle delay={0.3}>
+			<div class="elegant-card p-8 h-full">
+				<h3 class="text-2xl font-bold text-gray-900 mb-6">At a Glance</h3>
+				<dl class="space-y-4 text-gray-600 leading-relaxed">
+					<div>
+						<dt><strong>Project Title</strong></dt>
+						<dd class="mt-1">EXCALIBUR: EXplainable and demoCrΑtized pipeLInes for unBiased, trUstworthy, and Responsible human-centric AI</dd>
+					</div>
+					<div>
+						<dt><strong>Duration</strong></dt>
+						<dd class="mt-1">36 months</dd>
+					</div>
+					<div>
+						<dt><strong>Total Budget</strong></dt>
+						<dd class="mt-1">€300,000</dd>
+					</div>
+					<div>
+						<dt><strong>Host Institution</strong></dt>
+						<dd class="mt-1">Aristotle University of Thessaloniki (AUTh)</dd>
+					</div>
+					<div>
+						<dt><strong>Scientific Area</strong></dt>
+						<dd class="mt-1">SA5 "Mathematics & Information Sciences"</dd>
+					</div>
+					<div>
+						<dt><strong>Scientific Field/Subfield</strong></dt>
+						<dd class="mt-1">5.2 "Computer and information sciences" - 5.2.7 "Artificial intelligence, intelligent systems, multi-agent systems"</dd>
+					</div>
+				</dl>
+			</div>
+		</ScrollReveal>
+	</div>
+
+	<!-- Core Components Section -->
+	<ScrollReveal client:idle delay={0.4}>
 		<div class="text-center mb-16">
-		<ScrollReveal client:load delay={0.1}>
-            <div class="elegant-card p-8 mb-8">
-
-              <h3 class="text-xl font-bold text-gray-900 mb-4">Funded Research Initiative</h3>
-              <p class="text-gray-600 leading-relaxed">
-                The EXCALIBUR project is implemented under the Hellenic Foundation for Research and Innovation (HFRI / ELIDEK) through the call "Basic Research Financing (Horizontal support for all Sciences)", which is part of Component 4.5 "Promoting Research and Innovation" of the National Recovery and Resilience Plan "Greece 2.0", funded by the European Union – NextGenerationEU.
-              </p>
-            </div>
-          </ScrollReveal>
-
 			<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
 				Core Components
 			</h2>
