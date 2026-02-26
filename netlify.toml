@@ -23,9 +23,11 @@
     Cross-Origin-Opener-Policy = "same-origin"
 
     # Content Security Policy
-    # - script-src: self + self-hosted Plausible analytics
-    # - style-src: unsafe-inline needed for Astro inlined stylesheets and Tailwind
-    # - connect-src: self + Plausible event endpoint
+    # - script-src: 'unsafe-inline' is required for Astro's island hydration runtime
+    #   (client:load / client:idle directives inject inline <script> tags that cannot
+    #    be avoided without Astro-level nonce middleware).
+    # - style-src: 'unsafe-inline' required for Astro inlined stylesheets and Tailwind
+    # - connect-src: self + Plausible event endpoint + Web3Forms API
     # - frame-ancestors: replaces X-Frame-Options for modern browsers
     # - upgrade-insecure-requests: automatically upgrade HTTP sub-resources to HTTPS
-    Content-Security-Policy = "default-src 'self'; script-src 'self' https://analytics.csd.auth.gr; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://analytics.csd.auth.gr; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'; upgrade-insecure-requests;"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://analytics.csd.auth.gr; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://analytics.csd.auth.gr https://api.web3forms.com; frame-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; object-src 'none'; upgrade-insecure-requests;"
