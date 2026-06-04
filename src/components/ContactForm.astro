@@ -3,17 +3,17 @@
 
 <form
   id="contact-form"
-  name="contact"
+  action="https://formlander.csd.auth.gr/forms/contact/submit?token=e812708516718ce62acbf3731e8069ac13412d6698d1cb3e"
   method="POST"
-  data-netlify="true"
-  class="space-y-6"
+  class="formlander-stack space-y-6"
   aria-label="Contact form"
+  data-form-id="1"
+  data-form-public-id="92da08215952d97db60a"
+  data-form-token="e812708516718ce62acbf3731e8069ac13412d6698d1cb3e"
   novalidate
 >
-  <!-- Netlify Forms hidden input -->
-  <input type="hidden" name="form-name" value="contact" />
-  <!-- Honeypot spam protection -->
-  <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1" autocomplete="off" />
+  <!-- Formlander honeypot spam protection. I don't think it works, although it's mentioned in the Formlander Docs -->
+  <input type="text" name="__fl_hp" value="" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
   <!-- Success Message -->
   <div
     id="success-message"
@@ -250,7 +250,7 @@
     try {
       const formData = new FormData(form);
 
-      const response = await fetch("/", {
+      const response = await fetch(form.action, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: new URLSearchParams(formData).toString(),
