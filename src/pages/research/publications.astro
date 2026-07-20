@@ -31,6 +31,47 @@ import { SITE } from "../../config/site.mjs";
     <div class="panel panel--sand">
       <section class="max-w-4xl mx-auto px-4 py-20">
         <ScrollReveal client:load delay={0.2}>
+          <article class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm mb-8">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+                <Icon name="tabler:file-text" class="w-6 h-6 text-blue-700" aria-hidden="true" />
+              </div>
+              <div>
+                <p class="text-sm font-semibold text-blue-700 uppercase tracking-wide mb-2">Journal Article</p>
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">
+                  AI Harmonics: A human-centric and harms severity-adaptive AI risk assessment framework
+                </h2>
+                <p class="text-gray-700 mb-3">
+                  Vei, S., Giudici, P., Sermpezis, P., Vakali, A., &amp; Bernardelli, A. E.
+                </p>
+                <p class="text-gray-600 mb-6">
+                  <span class="font-semibold text-gray-800">Artificial Intelligence</span>, Volume 358, Article 104587, 2026.
+                  <br />
+                  DOI:
+                  <a
+                    href="https://doi.org/10.1016/j.artint.2026.104587"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-blue-700 hover:text-blue-900 underline underline-offset-2"
+                  >
+                    10.1016/j.artint.2026.104587
+                  </a>
+                </p>
+                <a
+                  href="https://doi.org/10.1016/j.artint.2026.104587"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 bg-blue-700 text-white px-5 py-3 rounded-lg font-semibold hover:bg-blue-800 transition-colors"
+                >
+                  View publication
+                  <Icon name="tabler:external-link" class="w-5 h-5" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+          </article>
+        </ScrollReveal>
+
+        <ScrollReveal client:load delay={0.2}>
           <article class="bg-white border border-gray-200 rounded-lg p-8 shadow-sm">
             <div class="flex items-start gap-4">
               <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
