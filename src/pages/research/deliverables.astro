@@ -1,0 +1,106 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import ScrollReveal from "../../components/ScrollReveal.tsx";
+import { Icon } from "astro-icon/components";
+import { SITE } from "../../config/site.mjs";
+
+const deliverables = [
+	{
+		code: "D2.1",
+		title: "Report on Trustworthy AI Principles",
+		workPackage: "Work Package 2 · Task 2.1",
+		version: "Final version 1.0",
+		date: "8 September 2026",
+		author: "Kostas Aggelopoulos",
+		reviewers: "Sofia Vei, Vasiliki Pantelopoulou, Ilias Dimitriadis, and Athena Vakali",
+		description:
+			"This deliverable establishes the conceptual and operational foundation for Trustworthy AI in EXCALIBUR. It focuses on Transparency, Fairness, and Accountability, translating regulatory, standardisation, governance, and scientific evidence into technical and auditable elements for the project's later research and validation activities.",
+		file: "/documents/EXCALIBUR_D2.1.pdf",
+	},
+];
+---
+
+<Layout
+	title={`Deliverables | ${SITE.title}`}
+	description="Browse the EXCALIBUR project's deliverables and research reports."
+	canonicalURL={`${SITE.url}/research/deliverables`}
+>
+	<Header />
+	<main id="main-content" role="main">
+		<div
+			class="panel panel--white relative overflow-hidden"
+			style="background-image: url('/images/banner-deliverables.jpg'); background-size: cover; background-position: 30% 70% ;"
+		>
+			<div class="absolute inset-0 bg-[#0b1a4a]/50 z-0"></div>
+			<section class="relative z-10 max-w-4xl mx-auto px-4 py-20">
+				<ScrollReveal client:idle>
+					<h1 class="text-5xl font-bold text-white mb-4 text-center">Deliverables</h1>
+				</ScrollReveal>
+				<ScrollReveal client:load delay={0.1}>
+					<p class="text-xl text-gray-100 mb-12">
+						Reports and documented research outputs produced throughout the EXCALIBUR project.
+					</p>
+				</ScrollReveal>
+			</section>
+		</div>
+
+		<div class="panel panel--sand">
+			<section class="max-w-4xl mx-auto px-4 py-20">
+				<div class="space-y-8">
+					{deliverables.map((deliverable, index) => (
+						<ScrollReveal client:load delay={0.2 + index * 0.1} key={deliverable.code}>
+							<article class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-lg transition-shadow">
+								<a
+									href={deliverable.file}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="group block p-8 focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-blue-700"
+									aria-label={`View ${deliverable.code}: ${deliverable.title}`}
+								>
+									<div class="flex items-start gap-4">
+										<div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+											<Icon name="tabler:file-description" class="w-6 h-6 text-blue-700" aria-hidden="true" />
+										</div>
+										<div class="min-w-0">
+											<p class="text-sm font-semibold text-blue-700 uppercase tracking-wide mb-2">
+												Deliverable {deliverable.code} · {deliverable.version}
+											</p>
+											<h2 class="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-700 transition-colors">
+												{deliverable.title}
+											</h2>
+											<p class="text-gray-700 mb-3">{deliverable.workPackage}</p>
+											<p class="text-gray-600 leading-relaxed mb-5">{deliverable.description}</p>
+											<div class="space-y-1 text-sm text-gray-600">
+												<p><span class="font-semibold text-gray-800">Author:</span> {deliverable.author}</p>
+												<p><span class="font-semibold text-gray-800">Internal reviewers:</span> {deliverable.reviewers}</p>
+												<p><span class="font-semibold text-gray-800">Date:</span> {deliverable.date}</p>
+											</div>
+											<span class="inline-flex items-center gap-2 mt-6 bg-blue-700 text-white px-5 py-3 rounded-lg font-semibold group-hover:bg-blue-800 transition-colors">
+												View deliverable
+												<Icon name="tabler:external-link" class="w-5 h-5" aria-hidden="true" />
+											</span>
+										</div>
+									</div>
+								</a>
+								<div class="border-t border-gray-100 px-8 py-4 flex flex-wrap items-center justify-between gap-3">
+									<p class="text-sm text-gray-500">PDF · {deliverable.code}</p>
+									<a
+										href={deliverable.file}
+										download
+										class="inline-flex items-center gap-2 text-sm font-semibold text-blue-700 hover:text-blue-900 transition-colors"
+									>
+										Download PDF
+										<Icon name="tabler:download" class="w-4 h-4" aria-hidden="true" />
+									</a>
+								</div>
+							</article>
+						</ScrollReveal>
+					))}
+				</div>
+			</section>
+		</div>
+	</main>
+	<Footer />
+</Layout>
