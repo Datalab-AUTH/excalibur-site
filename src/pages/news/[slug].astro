@@ -40,11 +40,11 @@ const formattedDate = post.data.date.toLocaleDateString("en-GB", {
       </div>
 
       {post.data.image && (
-        <div class="mb-10">
+        <div class="mb-10 overflow-hidden rounded-2xl">
           <img
             src={post.data.image}
             alt={post.data.imageAlt ?? "News image"}
-            class="w-full h-72 object-cover rounded-2xl"
+            class="block h-auto w-full"
             loading="lazy"
           />
         </div>
