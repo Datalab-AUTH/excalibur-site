@@ -75,11 +75,11 @@ const formatDate = (date: Date) =>
               class="rounded-xl border border-slate-200 bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col"
             >
               {post.data.image && (
-                <a href={`/news/${post.slug}`} class="block overflow-hidden bg-slate-100 h-48">
+                <a href={`/news/${post.slug}`} class="block overflow-hidden">
                   <img
                     src={post.data.image}
                     alt={post.data.imageAlt ?? "News image"}
-                    class="w-full h-full object-cover hover:scale-105 transition-transform"
+                    class="block h-auto w-full hover:scale-105 transition-transform"
                     loading="lazy"
                   />
                 </a>
